@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Analytics } from '@vercel/analytics/react';
 import doctorImg from './assets/image.png';
 import { 
   Activity, 
@@ -519,7 +520,9 @@ export default function App() {
   };
 
   return (
-    <div className="relative min-h-screen">
+    <>
+      <Analytics />
+      <div className="relative min-h-screen">
       {/* GLOBAL NOISE OVERLAY */}
       <div className="noise-overlay" />
 
@@ -1050,6 +1053,7 @@ export default function App() {
           </div>
         </div>
       )}
-    </div>
+      </div>
+    </>
   );
 }
