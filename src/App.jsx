@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import doctorImg from './assets/image.png';
 import { 
   Activity, 
   Check, 
@@ -93,7 +94,7 @@ const typewriterLogs = [
   "[OK] Hemoglobin count: 14.8 g/dL (optimal bounds).",
   "[OK] Thyroid TSH level: 2.1 uIU/mL (verified).",
   "[OK] Pathology supervisor review active...",
-  "[OK] Doctor Verification complete: Dr. Suyash approved.",
+  "[OK] Doctor Verification complete: Dr. Ajit Chavan approved.",
   "[OK] Secure patient PDF report finalized."
 ];
 
@@ -879,15 +880,15 @@ export default function App() {
 
           {/* Pathologist Profile */}
           <div className="max-w-4xl mx-auto bg-white border border-moss/10 rounded-[3rem] p-8 md:p-12 shadow-xl mb-16 flex flex-col md:flex-row gap-8 items-center" id="profile">
-            <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shrink-0 border-4 border-cream shadow-inner">
-              <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=800" alt="Dr. Suyash" className="w-full h-full object-cover" />
+            <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden shrink-0 border-4 border-cream shadow-inner bg-moss/5">
+              <img src={doctorImg} alt="Dr. Ajit Chavan" className="w-full h-full object-cover object-top scale-[1.05] -translate-x-3 contrast-125 brightness-105 saturate-110" />
             </div>
             <div>
               <span className="text-xs font-mono uppercase tracking-widest text-clay font-bold block mb-2">Lead Pathologist</span>
-              <h3 className="text-3xl font-outfit font-bold text-moss mb-2">Dr. Suyash</h3>
+              <h3 className="text-3xl font-outfit font-bold text-moss mb-2">Dr. Ajit Chavan</h3>
               <p className="text-sm font-sans font-medium text-moss/70 mb-4">MBBS, DCP (Pathology)</p>
               <p className="text-sm text-charcoal/70 leading-relaxed font-sans mb-6">
-                With over 25 years of experience in clinical pathology, Dr. Suyash ensures every test result is meticulously verified for accuracy. Our laboratory operates under strict quality control protocols to provide reliable diagnostics you can trust.
+                With over 25 years of experience in clinical pathology, Dr. Ajit Chavan ensures every test result is meticulously verified for accuracy. Our laboratory operates under strict quality control protocols to provide reliable diagnostics you can trust.
               </p>
               <a 
                 href="https://wa.me/917499753643"
